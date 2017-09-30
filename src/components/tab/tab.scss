@@ -1,0 +1,17 @@
+.tab{
+    display: flex;
+    font-size: $font_medium;
+    line-height: 44px;
+    .tabItem{
+        flex: 1;
+        text-align: center;
+        span{
+            padding-bottom: 5px;
+            color: $color_text_l;
+        }
+    }
+    .active span{
+        color: $color_theme;
+        border-bottom: 2px solid $color_theme;
+    }
+}

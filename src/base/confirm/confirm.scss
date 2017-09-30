@@ -1,0 +1,59 @@
+.confirm{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 990;
+    background: $color_bg_d;
+    .confirm-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        .confirm-content{
+            width: 270px;
+            border-radius: 13px;
+            background: $color_bg_highlight;
+            .text{
+                padding: 19px 15px;
+                line-height: 22px;
+                text-align: center;
+                font-size: $font_large;
+                color: $color_text_l;
+            }
+            .operate{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                font-size: $font_large;
+                .operate-btn{
+                    flex: 1;
+                    line-height: 22px;
+                    padding: 10px 0;
+                    border-top: 1px solid $color_bg_d;
+                    color: $color_text_d;
+                }
+                .left{
+                    border-right: 1px solid $color_bg_d;
+                }
+            }
+        }
+    }
+}
+.confirm-fade-enter-active{
+    animation: confirm-fadein .3s cubic-bezier(.17,.56,.88,.52);
+    .confirm-content{
+        animation: confirm-zoom .3s cubic-bezier(.17,.56,.88,.52);
+    }
+}
+@keyframes confirm-fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes confirm-zoom {
+    0% {transform: scale(0)}
+    50% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+}

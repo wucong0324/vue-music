@@ -1,0 +1,34 @@
+.search-box{
+    display: flex;
+    align-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 6px;
+    height: 40px;
+    background: $color_bg_highlight;
+    border-radius: 6px;
+    .icon-search{
+        font-size: 24px;
+        color: $color_bg;
+        line-height: 40px;
+    }
+    .box{
+        flex: 1;
+        margin: 0 5px;
+        line-height: 18px;
+        background: $color_bg_highlight;
+        color: $color_text;
+        font-size: $font_medium;
+        &::-moz-placeholder{
+            color: $color_text_d;
+        }
+        &::-webkit-input-placeholder{
+            color: $color_text_d;
+        }
+    }
+    .icon-dismiss{
+        font-size: 16px;
+        color: $color_bg;
+        line-height: 40px;
+    }
+}

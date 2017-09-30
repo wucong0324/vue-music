@@ -1,0 +1,37 @@
+.suggest{
+    height: 100%;
+    overflow: hidden;
+    .suggest-list{
+        padding: 0 30px;
+        .suggest-item{
+            display: flex;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        .icon{
+            flex: 0 0 30px;
+            width: 30px;
+            [class^='icon-']{
+                font-size: 14px;
+                color: $color_text_d;
+            }
+        }
+        .name{
+            flex: 1;
+            font-size: $font_medium;
+            color: $color_text_d;
+            overflow: hidden;
+            .text{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .no-result-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

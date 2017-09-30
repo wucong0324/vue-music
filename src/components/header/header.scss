@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: center;
+    color: $color_theme;
+    .icon{
+        width: 30px;
+        height: 32px;
+        margin-right: 9px;
+        margin-top: 6px;
+        @include bg_image('img/logo');
+        background-size: 100%;
+    }
+    .text{
+        font-size: $font_large;
+        line-height: 44px;
+    }
+    .mine{
+        position: absolute;
+        top: 0;
+        right: 0;
+        .icon-mine{
+            display: block;
+            padding: 12px;
+            font-size: 20px;
+            color: $color_theme;
+        }
+    }
+}

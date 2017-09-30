@@ -1,0 +1,122 @@
+.playlist{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    background: $color_bg_d;
+    .list-wrapper{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $color_bg_highlight;
+        .list-header{
+            position: relative;
+            padding: 20px 30px 10px 20px;
+            .title{
+                display: flex;
+                align-items: center;
+                .icon{
+                    margin-right: 10px;
+                    font-size: 30px;
+                    color: $color_theme_d;
+                }
+                .text{
+                    flex: 1;
+                    font-size: $font_medium;
+                    color: $color_text_l;
+                }
+                .clear{
+                    @include extend_click();
+                    .icon-clear{
+                        font-size: $font_medium;
+                        color: $color_text_d;
+                    }
+                }
+            }
+        }
+        .list-content{
+            max-height: 240px;
+            overflow: hidden;
+            .item{
+                display: flex;
+                align-items: center;
+                height: 40px;
+                padding: 0 30px 0 20px;
+                overflow: hidden;
+                &.list-enter-active, &.list-leave-active{
+                    transition: all .2s linear;
+                }
+                &.list-enter,&.list-leave-to{
+                    height: 0;
+                }
+                .current{
+                    flex: 0 0 20px;
+                    width: 20px;
+                    font-size: $font_small;
+                    color: $color_theme_d;
+                }
+                .text{
+                    flex: 1;
+                    @include no_wrap();
+                    font-size: $font_medium;
+                    color: $color_text_d;
+                }
+                .like{
+                    @include extend_click();
+                    margin-right: 15px;
+                    font-size: $font_small;
+                    color: $color_theme;
+                    .icon-favorite{
+                        color: $color_theme_sub;
+                    }
+                }
+                .delete{
+                    @include extend_click();
+                    font-size: $font_small;
+                    color: $color_theme;
+                }
+            }
+        }
+        .list-operate{
+            width: 140px;
+            margin: 20px auto 30px;
+            .add{
+                display: flex;
+                align-items: center;
+                padding: 8px 16px;
+                border: 1px solid $color_text_l;
+                border-radius: 100px;
+                color: $color_text_l;
+                .icon-add{
+                    margin-right: 5px;
+                    font-size: $font_small_s;
+                }
+                .text{
+                    font-size: $font_small;
+                }
+            }
+        }
+        .list-close{
+            text-align: center;
+            line-height: 50px;
+            background: $color_bg;
+            font-size: $font_medium_x;
+            color: $color_text_l;
+        }
+    }
+}
+.list-fade-enter-active, .list-fade-leave-active{
+    transition: opacity .3s;
+    .list-wrapper{
+        transition: all .3s;
+    }
+}
+.list-fade-enter, .list-fade-leave-to{
+    opacity: 0;
+    .list-wrapper{
+        transform: translate3d(0, 100%, 0);
+    }
+}

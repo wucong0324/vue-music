@@ -1,0 +1,19 @@
+.switches{
+    display: flex;
+    align-items: center;
+    width: 240px;
+    margin: 0 auto;
+    border: 1px solid $color_bg_highlight;
+    border-radius: 5px;
+    .switch-item{
+        flex: 1;
+        padding: 8px;
+        text-align: center;
+        font-size: $font_medium;
+        color: $color_text_d;
+        &.active{
+            background: $color_bg_highlight;
+            color: $color_text;
+        }
+    }
+}

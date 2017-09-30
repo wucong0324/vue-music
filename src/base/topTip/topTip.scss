@@ -1,0 +1,13 @@
+.top-tip{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    background: $color_bg_dialog;
+}
+.drop-enter-active, .drop-leave-active{
+    transition: all .3s;
+}
+.drop-enter,.drop-leave-to{
+    transform: translate3d(0, -100%, 0);
+}
