@@ -93,7 +93,7 @@
                 this.$refs.confirm.show();
             },
             confirmClear(){
-                console.log('清空啦');
+//                console.log('清空啦');
                 this.deleteSongList();
                 this.hide();
 

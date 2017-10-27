@@ -89,7 +89,7 @@
                 this.touch.y2 = firstTouch.pageY;
                 let delta = (this.touch.y2 - this.touch.y1) / ANCHOR_HEIGHT | 0;
                 let anchorIndex = parseInt(this.touch.anchorIndex) + delta;
-                console.log(delta);
+//                console.log(delta);
                 this._scrollTo(anchorIndex);
             },
             refresh(){
@@ -99,7 +99,7 @@
                 this.scrollY = pos.y;
             },
             _scrollTo(index){
-                console.log(index);
+//                console.log(index);
                 if(!index && index !==0){
                     return
                 }
@@ -130,7 +130,7 @@
                 }, 20)
             },
             scrollY(newY){
-                console.log(newY);
+//                console.log(newY);
                 const listHeight = this.listHeight;
                 //  滚动到顶部，newY>0
                 if(newY > 0){
@@ -151,7 +151,7 @@
                 this.currentIndex = listHeight.length-2;
             },
             diff(newVal){
-                console.log(newVal);
+//                console.log(newVal);
                 let fixedTop = (newVal > 0 && newVal < TITLE_HEIGHT) ? newVal - TITLE_HEIGHT : 0;
                 if(this.fixedTop === fixedTop){
                     return

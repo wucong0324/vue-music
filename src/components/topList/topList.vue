@@ -30,7 +30,7 @@
                     return
                 }
                 getMusicList(this.topList.id).then((res) => {
-                    console.log(res);
+//                    console.log(res);
                     this.songs = this._normalizeSongs(res.songlist);
                 })
             },
